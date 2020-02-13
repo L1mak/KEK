@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prkatika1", "prkatika1\prkatika1.csproj", "{7158E1CA-3753-4584-9928-530F5D7B9B18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7158E1CA-3753-4584-9928-530F5D7B9B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7158E1CA-3753-4584-9928-530F5D7B9B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7158E1CA-3753-4584-9928-530F5D7B9B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7158E1CA-3753-4584-9928-530F5D7B9B18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1190E957-5A51-4D45-AB46-B423EC1E6D52}
+	EndGlobalSection
+EndGlobal

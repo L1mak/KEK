@@ -12,8 +12,8 @@ namespace prkatika1
         public bool Jojo(string vin)
         {
             Regex reg = new Regex("[0-9A-HJ-N,P,R-Z]{17}");
-            if (!reg.IsMatch(vin)) { return true; }
-            else { return false;}
+            if (!reg.IsMatch(vin) && reg.IsMatch(@"\d${4}")) { return false;}
+            return true;
         }
 
     }

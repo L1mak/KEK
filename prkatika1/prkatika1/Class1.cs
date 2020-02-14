@@ -12,7 +12,7 @@ namespace prkatika1
         public bool CheckVIN(string vin)
         {
             Regex reg = new Regex("[0-9A-HJ-N,P,R-Z]{17}");
-            if (!reg.IsMatch(vin) && reg.IsMatch(@"\d${4}")) { return false;}
+            if (!reg.IsMatch(vin))) { return false;}
             return true;
         }
         public string GetVINCountry(string vin)

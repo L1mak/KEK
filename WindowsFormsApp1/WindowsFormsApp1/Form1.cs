@@ -36,8 +36,10 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand auth = new SqlCommand($"SELECT * FROM BAZA WHERE login  = '{textBox1.Text}' AND password = '{textBox2.Text}'", connect);
-            if (auth != null) MessageBox.Show("OK");
+            SqlCommand auth = new SqlCommand("SELECT * FROM dbo.auth WHERE login  = '"+textBox1.Text+"' AND password = '"+textBox2.Text+"'", connect);
+           SqlDataReader sqd = auth.ExecuteReader();
+            
+            if (sqd.HasRows) MessageBox.Show("OK");
 
         }
     }

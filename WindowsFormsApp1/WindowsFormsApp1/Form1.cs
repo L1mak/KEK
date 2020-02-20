@@ -19,6 +19,10 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            if (Properties.Settings.Default.TimeoutGlobal > DateTime.UtcNow)
+            {
+                button1.Enabled = false;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,25 +45,29 @@ namespace WindowsFormsApp1
             
             connect.Open();
             SqlCommand auth = new SqlCommand("SELECT * FROM dbo.auth WHERE login  = '"+textBox1.Text+"' AND password = '"+textBox2.Text+"'", connect);
-           SqlDataReader sqr = auth.ExecuteReader();
+            SqlDataReader sqr = auth.ExecuteReader();
 
-            if (sqr.HasRows) MessageBox.Show("Вы успешно авторизовались");
-            else {
-                    MessageBox.Show("Попробуйте снова");
+            if (sqr.HasRows)
+            {
+                MessageBox.Show("Вы успешно авторизовались");
+            }
+            else
+            {
+                MessageBox.Show("Попробуйте снова");
                 Properties.Settings.Default.co++;
-                    if (Properties.Settings.Default.co == 3)
-                    {
+                if (Properties.Settings.Default.co > 2)
+                {
                     Properties.Settings.Default.TimeoutGlobal = DateTime.UtcNow.AddMinutes(1);
-
-                        button1.Enabled = false;
-                    }
-                }            
+                    button1.Enabled = false;
+                }
+            }
+            Properties.Settings.Default.Save();
             connect.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           while (Properties.Settings.Default.TimeoutGlobal < DateTime.UtcNow)
+           if (Properties.Settings.Default.TimeoutGlobal < DateTime.UtcNow && button1.Enabled == false)
            {
                 Properties.Settings.Default.co = 0;
                 button1.Enabled = true; 

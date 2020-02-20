@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             SqlCommand auth = new SqlCommand($"SELECT * FROM BAZA WHERE login  = '{textBox1.Text}' AND password = '{textBox2.Text}'", connect);
-            if (auth) { }
+            if (auth != null) MessageBox.Show("OK");
 
         }
     }

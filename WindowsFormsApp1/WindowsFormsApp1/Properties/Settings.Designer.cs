@@ -45,5 +45,16 @@ namespace WindowsFormsApp1.Properties {
                 this["co"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime afk {
+            get {
+                return ((global::System.DateTime)(this["afk"]));
+            }
+            set {
+                this["afk"] = value;
+            }
+        }
     }
 }

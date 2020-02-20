@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         SqlConnection connect = new SqlConnection("Data source = 303-9\\MSSQLSERVERRR; Initial Catalog = BAZA; Integrated Security = true;");
+
+
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            connect.Open();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,11 +38,32 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand auth = new SqlCommand("SELECT * FROM dbo.auth WHERE login  = '"+textBox1.Text+"' AND password = '"+textBox2.Text+"'", connect);
-           SqlDataReader sqd = auth.ExecuteReader();
             
-            if (sqd.HasRows) MessageBox.Show("OK");
+            connect.Open();
+            SqlCommand auth = new SqlCommand("SELECT * FROM dbo.auth WHERE login  = '"+textBox1.Text+"' AND password = '"+textBox2.Text+"'", connect);
+           SqlDataReader sqr = auth.ExecuteReader();
 
+            if (sqr.HasRows) MessageBox.Show("Вы успешно авторизовались");
+            else {
+                    MessageBox.Show("Попробуйте снова");
+                Properties.Settings.Default.co++;
+                    if (Properties.Settings.Default.co == 3)
+                    {
+                    Properties.Settings.Default.TimeoutGlobal = DateTime.UtcNow.AddMinutes(1);
+
+                        button1.Enabled = false;
+                    }
+                }            
+            connect.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+           while (Properties.Settings.Default.TimeoutGlobal < DateTime.UtcNow)
+           {
+                Properties.Settings.Default.co = 0;
+                button1.Enabled = true; 
+           }
         }
     }
 }

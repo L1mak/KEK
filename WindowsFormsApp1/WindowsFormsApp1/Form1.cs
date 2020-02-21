@@ -42,30 +42,30 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            //connect.Open();
-            //SqlCommand auth = new SqlCommand("SELECT * FROM dbo.auth WHERE login  = '"+textBox1.Text+"' AND password = '"+textBox2.Text+"'", connect);
-            //SqlDataReader sqr = auth.ExecuteReader();
 
-            //if (sqr.HasRows)
-            //{
-            //    MessageBox.Show("Вы успешно авторизовались");
+            connect.Open();
+            SqlCommand auth = new SqlCommand("SELECT * FROM dbo.auth WHERE login  = '" + textBox1.Text + "' AND password = '" + textBox2.Text + "'", connect);
+            SqlDataReader sqr = auth.ExecuteReader();
+
+            if (sqr.HasRows)
+            {
+                MessageBox.Show("Вы успешно авторизовались");
                 Form2 fm = new Form2();
                 fm.Show();
                 this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Попробуйте снова");
-            //    Properties.Settings.Default.co++;
-            //    if (Properties.Settings.Default.co > 2)
-            //    {
-            //        Properties.Settings.Default.TimeoutGlobal = DateTime.UtcNow.AddMinutes(1);
-            //        button1.Enabled = false;
-            //    }
-            //}
-            //Properties.Settings.Default.Save();
-            //connect.Close();
+            }
+            else
+            {
+                MessageBox.Show("Попробуйте снова");
+                Properties.Settings.Default.co++;
+                if (Properties.Settings.Default.co > 2)
+                {
+                    Properties.Settings.Default.TimeoutGlobal = DateTime.UtcNow.AddMinutes(1);
+                    button1.Enabled = false;
+                }
+            }
+            Properties.Settings.Default.Save();
+            connect.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

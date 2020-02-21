@@ -8,25 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
+
+        public SqlConnection connect = new SqlConnection("Data source = 303-9\\MSSQLSERVERRR; Initial Catalog = BAZA; Integrated Security = true;");
+
         public Form2()
         {
             InitializeComponent();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            
             var source = new AutoCompleteStringCollection();
             source.AddRange(new string[]
             {
                 "Уфа", "Анаконда", "Артем", "Москва", "Савва", "Артур",
             });
-            textBox7.AutoCompleteCustomSource = source;
-            textBox6.AutoCompleteCustomSource = source;
+            City1.AutoCompleteCustomSource = source;
+            City2.AutoCompleteCustomSource = source;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,6 +77,13 @@ namespace WindowsFormsApp1
             }
             
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            connect.Open();
+            SqlCommand auth = new SqlCommand("INSERT INRO dbo.drivers([name], [surname], [middlename], [passport_serial], [passport_number], [postcode], [address], [address_life], [company], [job_name], [phone], [description]) VALUES(");
         }
     }
 }

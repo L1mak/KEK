@@ -45,26 +45,27 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.TextBox();
+            this.Surname = new System.Windows.Forms.TextBox();
+            this.Name = new System.Windows.Forms.TextBox();
+            this.Middlename = new System.Windows.Forms.TextBox();
+            this.Passport_Serial = new System.Windows.Forms.TextBox();
+            this.City2 = new System.Windows.Forms.TextBox();
+            this.City1 = new System.Windows.Forms.TextBox();
+            this.Job = new System.Windows.Forms.TextBox();
+            this.Employment = new System.Windows.Forms.TextBox();
+            this.Phone = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.Description = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.Address1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.Address2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.Passport_number = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +87,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Добавить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // timer1
             // 
@@ -210,93 +212,93 @@
             this.label13.TabIndex = 14;
             this.label13.Text = "Замечания";
             // 
-            // textBox1
+            // Id
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 15;
+            this.Id.Location = new System.Drawing.Point(28, 42);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(119, 20);
+            this.Id.TabIndex = 15;
             // 
-            // textBox2
+            // Surname
             // 
-            this.textBox2.Location = new System.Drawing.Point(28, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 20);
-            this.textBox2.TabIndex = 16;
+            this.Surname.Location = new System.Drawing.Point(28, 83);
+            this.Surname.Name = "Surname";
+            this.Surname.Size = new System.Drawing.Size(119, 20);
+            this.Surname.TabIndex = 16;
             // 
-            // textBox3
+            // Name
             // 
-            this.textBox3.Location = new System.Drawing.Point(28, 122);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 20);
-            this.textBox3.TabIndex = 17;
+            this.Name.Location = new System.Drawing.Point(28, 122);
+            this.Name.Name = "Name";
+            this.Name.Size = new System.Drawing.Size(119, 20);
+            this.Name.TabIndex = 17;
             // 
-            // textBox4
+            // Middlename
             // 
-            this.textBox4.Location = new System.Drawing.Point(28, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 20);
-            this.textBox4.TabIndex = 18;
+            this.Middlename.Location = new System.Drawing.Point(28, 161);
+            this.Middlename.Name = "Middlename";
+            this.Middlename.Size = new System.Drawing.Size(119, 20);
+            this.Middlename.TabIndex = 18;
             // 
-            // textBox5
+            // Passport_Serial
             // 
-            this.textBox5.Location = new System.Drawing.Point(189, 161);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(119, 20);
-            this.textBox5.TabIndex = 19;
+            this.Passport_Serial.Location = new System.Drawing.Point(189, 161);
+            this.Passport_Serial.Name = "Passport_Serial";
+            this.Passport_Serial.Size = new System.Drawing.Size(119, 20);
+            this.Passport_Serial.TabIndex = 19;
             // 
-            // textBox6
+            // City2
             // 
-            this.textBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox6.Location = new System.Drawing.Point(322, 264);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(119, 20);
-            this.textBox6.TabIndex = 20;
+            this.City2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.City2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.City2.Location = new System.Drawing.Point(322, 264);
+            this.City2.Name = "City2";
+            this.City2.Size = new System.Drawing.Size(119, 20);
+            this.City2.TabIndex = 20;
             // 
-            // textBox7
+            // City1
             // 
-            this.textBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox7.Location = new System.Drawing.Point(29, 264);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(119, 20);
-            this.textBox7.TabIndex = 21;
+            this.City1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.City1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.City1.Location = new System.Drawing.Point(29, 264);
+            this.City1.Name = "City1";
+            this.City1.Size = new System.Drawing.Size(119, 20);
+            this.City1.TabIndex = 21;
             // 
-            // textBox8
+            // Job
             // 
-            this.textBox8.Location = new System.Drawing.Point(189, 78);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(119, 20);
-            this.textBox8.TabIndex = 22;
+            this.Job.Location = new System.Drawing.Point(189, 78);
+            this.Job.Name = "Job";
+            this.Job.Size = new System.Drawing.Size(119, 20);
+            this.Job.TabIndex = 22;
             // 
-            // textBox9
+            // Employment
             // 
-            this.textBox9.Location = new System.Drawing.Point(189, 122);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(119, 20);
-            this.textBox9.TabIndex = 23;
+            this.Employment.Location = new System.Drawing.Point(189, 122);
+            this.Employment.Name = "Employment";
+            this.Employment.Size = new System.Drawing.Size(119, 20);
+            this.Employment.TabIndex = 23;
             // 
-            // textBox10
+            // Phone
             // 
-            this.textBox10.Location = new System.Drawing.Point(369, 36);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(119, 20);
-            this.textBox10.TabIndex = 24;
+            this.Phone.Location = new System.Drawing.Point(369, 36);
+            this.Phone.Name = "Phone";
+            this.Phone.Size = new System.Drawing.Size(119, 20);
+            this.Phone.TabIndex = 24;
             // 
-            // textBox11
+            // Email
             // 
-            this.textBox11.Location = new System.Drawing.Point(369, 75);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(119, 20);
-            this.textBox11.TabIndex = 25;
+            this.Email.Location = new System.Drawing.Point(369, 75);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(119, 20);
+            this.Email.TabIndex = 25;
             // 
-            // textBox12
+            // Description
             // 
-            this.textBox12.Location = new System.Drawing.Point(369, 114);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(119, 20);
-            this.textBox12.TabIndex = 26;
+            this.Description.Location = new System.Drawing.Point(369, 114);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(119, 20);
+            this.Description.TabIndex = 26;
             // 
             // pictureBox1
             // 
@@ -320,12 +322,12 @@
             this.label14.TabIndex = 28;
             this.label14.Text = "ТЫК СЮДА ->";
             // 
-            // textBox13
+            // Address1
             // 
-            this.textBox13.Location = new System.Drawing.Point(154, 264);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(119, 20);
-            this.textBox13.TabIndex = 29;
+            this.Address1.Location = new System.Drawing.Point(154, 264);
+            this.Address1.Name = "Address1";
+            this.Address1.Size = new System.Drawing.Size(119, 20);
+            this.Address1.TabIndex = 29;
             // 
             // label15
             // 
@@ -345,12 +347,12 @@
             this.label16.TabIndex = 31;
             this.label16.Text = "Точный адрес";
             // 
-            // textBox14
+            // Address2
             // 
-            this.textBox14.Location = new System.Drawing.Point(447, 264);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(119, 20);
-            this.textBox14.TabIndex = 32;
+            this.Address2.Location = new System.Drawing.Point(447, 264);
+            this.Address2.Name = "Address2";
+            this.Address2.Size = new System.Drawing.Size(119, 20);
+            this.Address2.TabIndex = 32;
             // 
             // label17
             // 
@@ -370,31 +372,39 @@
             this.label18.TabIndex = 33;
             this.label18.Text = "Город";
             // 
+            // Passport_number
+            // 
+            this.Passport_number.Location = new System.Drawing.Point(189, 187);
+            this.Passport_number.Name = "Passport_number";
+            this.Passport_number.Size = new System.Drawing.Size(119, 20);
+            this.Passport_number.TabIndex = 35;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Passport_number);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.Address2);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.Address1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Description);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Phone);
+            this.Controls.Add(this.Employment);
+            this.Controls.Add(this.Job);
+            this.Controls.Add(this.City1);
+            this.Controls.Add(this.City2);
+            this.Controls.Add(this.Passport_Serial);
+            this.Controls.Add(this.Middlename);
+            this.Controls.Add(this.Name);
+            this.Controls.Add(this.Surname);
+            this.Controls.Add(this.Id);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -438,25 +448,26 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox Id;
+        private System.Windows.Forms.TextBox Surname;
+        private System.Windows.Forms.TextBox Name;
+        private System.Windows.Forms.TextBox Middlename;
+        private System.Windows.Forms.TextBox Passport_Serial;
+        private System.Windows.Forms.TextBox City2;
+        private System.Windows.Forms.TextBox City1;
+        private System.Windows.Forms.TextBox Job;
+        private System.Windows.Forms.TextBox Employment;
+        private System.Windows.Forms.TextBox Phone;
+        private System.Windows.Forms.TextBox Email;
+        private System.Windows.Forms.TextBox Description;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox Address1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox Address2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox Passport_number;
     }
 }

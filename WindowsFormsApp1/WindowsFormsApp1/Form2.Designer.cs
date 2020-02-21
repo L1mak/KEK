@@ -53,7 +53,7 @@
             this.City2 = new System.Windows.Forms.TextBox();
             this.City1 = new System.Windows.Forms.TextBox();
             this.Job = new System.Windows.Forms.TextBox();
-            this.Employment = new System.Windows.Forms.TextBox();
+            this.Job_name = new System.Windows.Forms.TextBox();
             this.Phone = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
             this.Description = new System.Windows.Forms.TextBox();
@@ -272,12 +272,12 @@
             this.Job.Size = new System.Drawing.Size(119, 20);
             this.Job.TabIndex = 22;
             // 
-            // Employment
+            // Job_name
             // 
-            this.Employment.Location = new System.Drawing.Point(189, 122);
-            this.Employment.Name = "Employment";
-            this.Employment.Size = new System.Drawing.Size(119, 20);
-            this.Employment.TabIndex = 23;
+            this.Job_name.Location = new System.Drawing.Point(189, 122);
+            this.Job_name.Name = "Job_name";
+            this.Job_name.Size = new System.Drawing.Size(119, 20);
+            this.Job_name.TabIndex = 23;
             // 
             // Phone
             // 
@@ -396,7 +396,7 @@
             this.Controls.Add(this.Description);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.Phone);
-            this.Controls.Add(this.Employment);
+            this.Controls.Add(this.Job_name);
             this.Controls.Add(this.Job);
             this.Controls.Add(this.City1);
             this.Controls.Add(this.City2);
@@ -456,7 +456,7 @@
         private System.Windows.Forms.TextBox City2;
         private System.Windows.Forms.TextBox City1;
         private System.Windows.Forms.TextBox Job;
-        private System.Windows.Forms.TextBox Employment;
+        private System.Windows.Forms.TextBox Job_name;
         private System.Windows.Forms.TextBox Phone;
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.TextBox Description;

@@ -81,7 +81,15 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            string name = "";
+            string surname = "";
+            string middlename = "";
+            string job = "";
+            string JobName = "";
+            string Address = "";
+            string City = "";
+            string Email = "";
+            string Phone = "";
             connect.Open();
             SqlCommand auth = new SqlCommand("INSERT INRO dbo.drivers([name], [surname], [middlename], [passport_serial], [passport_number], [postcode], [address], [address_life], [company], [job_name], [phone], [description]) VALUES(");
         }
